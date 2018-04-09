@@ -6,6 +6,10 @@ import java.io.PrintWriter
 
 object SimpleSql1 {
   def main(args: Array[String]) {
+    
+      // Added folowing statement to get rid of userlogin error caused while running the code from IDE on dev/linux box
+    UserGroupInformation.setLoginUser(UserGroupInformation.createRemoteUser("vy0769"))
+    
     val spark = SparkSession.builder.appName("Simple Application").config("spark.master", "local").getOrCreate()
 
     import spark.implicits._
