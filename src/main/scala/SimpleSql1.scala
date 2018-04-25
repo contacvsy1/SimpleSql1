@@ -2,6 +2,7 @@
 import org.apache.spark.sql.SparkSession
 import java.io.File
 import java.io.PrintWriter
+ import org.apache.hadoop.security.UserGroupInformation
 // import spark.implicits._
 
 object SimpleSql1 {
